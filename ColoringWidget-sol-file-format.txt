@@ -9,9 +9,9 @@ HEADER 1 (Lenght: 6)
 HEADER 2 (Lenght: 38)
 4 Bytes = Letters TCOS
 8 Bytes = 00 04 00 00 00 00 00 0E
-14 Bytes = Letters "ColoringWidget"
+14 Bytes = String "ColoringWidget"
 5 Bytes = 00 00 00 03 09
-4 Bytes = Letters "grid"
+  4 Bytes = String "grid"
 1 Byte = 06
 2 Bytes = Something about Color Number Lenght
 
