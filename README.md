@@ -1,3 +1,5 @@
+![image](https://github.com/zigaudrey/heidi-ColoringWidget-tools/assets/129554573/47ca23bc-ef6a-4938-8cb4-1bc2e93e9dbf)
+
 # Heidi's ColoringWidget Conversion Tools
 Python scripts that convert pictures or retrieve color data for Heidi's ColoringWidget Flash App
 
