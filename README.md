@@ -21,6 +21,7 @@ Heidi's Coloring Widget (or as I call DA Pixel Maker) is a Flash App created for
 Though to be made for a Valentine-theme contest, artists use it as a Pixel Art software, even after the end of the contest. Until Flash Reader is no longer available.
 
 The Flash App can be downloaded [here](http://st.deviantart.com/news/show-the-love/expressinstall.swf) (If you have FlashPoint, launch with Adobe Flash Player 32.0)
+
 Here are exemple of [Pixel Art made with this Flash App](https://web.archive.org/web/20120119161727/http://browse.deviantart.com/contests/2010/showthelove/)
 
 ## Why these tools were made
