@@ -1,5 +1,5 @@
-# heidi-ColoringWidget-tools
-Python script related to Heidi's ColoringWidget Flash App
+# Heidi's ColoringWidget Conversion Tools
+Scripts related to Heidi's ColoringWidget Flash App
 
 ## Picture Conversion Tool
 Turn a picture into a SOL file to resume or modify on the Flash App.
