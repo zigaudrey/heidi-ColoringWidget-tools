@@ -1,0 +1,54 @@
+HEIDI'S COLORING WIDGET SOL FILE FORMAT
+
+Eudian Order: Little Eudian
+
+HEADER 1 (Lenght: 6)
+2 Bytes = 00 BF (Magic Byte)
+4 Bytes = File Lenght (unint34) (Header 2 + Body)
+
+HEADER 2 (Lenght: 38)
+4 Bytes = Letters TCOS
+8 Bytes = 00 04 00 00 00 00 00 0E
+14 Bytes = Letters "ColoringWidget"
+5 Bytes = 00 00 00 03 09
+4 Bytes = Letters "grid"
+1 Byte = 06
+2 Bytes = Something about Color Number Lenght
+
+BODY (Lenght: Variable)
+121 *
+{
+x Bytes = Color Decimal Value // 0 - 16777215
+}
+Separated with Comas / 2C
+Body end with Null / 00
+
+==============================================
+GRID'S TWO (OR THREE) BYTES
+
+0 < code < 128 = Result + 1
+128 < code < 2048 = Result + 2
+2048< code < 65536 = Result + 3
+code > 65536 = Result + 4
+
+. ‡G = 135 + 71 = 206
+2 * 121 = 242
+-121 * 
+
+By changing the color blue shade, the unknows bytes remain the same. This is linked to Color Decimal Number Lenght!
+The Script for [All Dark Blue Pixel Sheet] shows the result of 300
+
+===============================================
+COLOR DECIMAL VALUE
+
+The application reads pixels from left to right, top to bottom.
+
+Color Decimal Value is calculated as follow:
+(R * 256 * 256) + (G * 256 ) + B
+
+The Decimal Value is between 0(Black) and 16777215(White)
+
+To calculate the RGB Value from the Color Decimal Value:
+R = DecColor // 256 // 256 % 256
+G = DecColor // 256 % 256
+B = DecColor % 256
