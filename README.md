@@ -2,7 +2,7 @@
 Python scripts that convert pictures or retrieve color data for Heidi's ColoringWidget Flash App
 
 ## Picture Conversion Tool
-Turn a picture into a SOL file to resume or modify on the Flash App.
+Convert a picture into a SOL file to resume or modify on the Flash App.
 
 ### Steps for Picture Conversion Tool
 1. After downloading the scripts, create an Virtual Environment in the folder and add the PIL Lib. [Check tutorial here](https://www.youtube.com/watch?v=IAvAlS0CuxI)
