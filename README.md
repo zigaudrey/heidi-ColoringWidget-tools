@@ -5,7 +5,7 @@ Python scripts that convert pictures or retrieve color data for Heidi's Coloring
 Turn a picture into a SOL file to resume or modify on the Flash App.
 
 ### Steps for Picture Conversion Tool
-1. After downloading the scripts, create an Virtual Environement in the folder and add the PIL Lib. [Check tutorial here](https://www.youtube.com/watch?v=IAvAlS0CuxI)
+1. After downloading the scripts, create an Virtual Environment in the folder and add the PIL Lib. [Check tutorial here](https://www.youtube.com/watch?v=IAvAlS0CuxI)
 1. Open the app, choose a picture you want to convert (dimension must be 550 x 550)
 1. A new SOL file will be created. It will be added on the same folder as the original picture
 1. Go to the directory below:
@@ -14,7 +14,7 @@ Turn a picture into a SOL file to resume or modify on the Flash App.
 1. Open the Coloring Widget App and the picture is now displayed
 
 ## SOL Color Finder
-Retreive color values from the SOL File. A new TXT will be created on the folder with the target SOL File.
+Retreive color values from the SOL File. A list of color values will be displayed and added in a new TXT aside with the target SOL File.
 
 ## Story of Heidi's Coloring Widget Tool
 Heidi's Coloring Widget (or as I call DA Pixel Maker) is a Flash App created for [the 2010 contest "Show Your Love"](https://web.archive.org/web/20121114101333/https://heidi.deviantart.com/journal/Show-the-Love-Valentine-s-Day-Contest-214219090).
