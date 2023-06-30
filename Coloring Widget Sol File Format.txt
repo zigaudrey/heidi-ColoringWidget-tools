@@ -4,7 +4,7 @@ Eudian Order: Little Eudian
 
 HEADER 1 (Lenght: 6)
 2 Bytes = 00 BF (Magic Byte)
-4 Bytes = File Lenght (unint34) (Header 2 + Body)
+4 Bytes = File Lenght (unint32) (Header 2 + Body)
 
 HEADER 2 (Lenght: 38)
 4 Bytes = Letters TCOS
@@ -31,7 +31,7 @@ GRID'S TWO (OR THREE) BYTES
 2048< code < 65536 = Result + 3
 code > 65536 = Result + 4
 
-. ‡G = 135 + 71 = 206
+. â€¡G = 135 + 71 = 206
 2 * 121 = 242
 -121 * 
 
@@ -41,7 +41,7 @@ The Script for [All Dark Blue Pixel Sheet] shows the result of 300
 ===============================================
 COLOR DECIMAL VALUE
 
-The application reads pixels from left to right, top to bottom.
+The Flash App reads pixels from left to right, top to bottom.
 
 Color Decimal Value is calculated as follow:
 (R * 256 * 256) + (G * 256 ) + B
