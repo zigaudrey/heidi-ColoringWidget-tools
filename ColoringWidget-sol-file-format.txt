@@ -11,7 +11,7 @@ HEADER 2 (Lenght: 38)
 8 Bytes = 00 04 00 00 00 00 00 0E
 14 Bytes = String "ColoringWidget"
 5 Bytes = 00 00 00 03 09
-  4 Bytes = String "grid"
+4 Bytes = String "grid"
 1 Byte = 06
 2 Bytes = Something about Color Number Lenght
 
@@ -38,6 +38,12 @@ code > 65536 = Result + 4
 By changing the color blue shade, the unknows bytes remain the same. This is linked to Color Decimal Number Lenght!
 The Script for [All Dark Blue Pixel Sheet] shows the result of 300
 
+If added a black pixel as the first case, . ‡G(87,47) turn into . ‡C (87,43)
+If added a white pixel as the first case, . ‡G(87,47) turn into . ‡Q (87,53)
+
+.ƒc (83,63) for all Black (0)
+.‘. (91,01) for all White (16777215)
+Space of 3438 / D6E or [E / 15 et 62 / 98]
 ===============================================
 COLOR DECIMAL VALUE
 
