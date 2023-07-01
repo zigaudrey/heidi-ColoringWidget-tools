@@ -93,21 +93,29 @@ def color_find():
         for n in range(0, len(color_result)-1):
             color_result[n] = color_result[n] + "\n"
 
-        out_file = open(file_path_output, "w+")
+        if color_list.count("0") == 1 or color_list.count("16777215") == 1 :
+            if "0" in color_list:
+                window.title("That's it?This is just a black picture.")
+            else:
+                window.title("You choose a blank SOL file!")
 
-        out_file.write(solo_file_name + "\n")
-        out_file.write("Nb of Colors: " + str(len(color_list)) + "\n")
+        else:
+
+            out_file = open(file_path_output, "w+")
+
+            out_file.write(solo_file_name + "\n")
+            out_file.write("Nb of Colors: " + str(len(color_list)) + "\n")
             
-        for n in range(0, len(color_result)):
-            out_file.write(color_result[n])
+            for n in range(0, len(color_result)):
+                out_file.write(color_result[n])
 
-        out_file.close()
+            out_file.close()
 
-        if len(color_list) > 43 :
-            window.title("Wow! That's a lotsa colors")
-            sleep(5)
+            if len(color_list) > 43 :
+                window.title("Wow! That's a lotsa colors")
+                sleep(5)
 
-        window.title("Done! Check the txt file!")
+            window.title("Done! Check the txt file!")
 
     else:
         window.title("Are you sure this is a Coloring Widget SOL File?")
