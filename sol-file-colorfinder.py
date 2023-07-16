@@ -6,10 +6,83 @@ from itertools import cycle
 from tkinter import filedialog
 from time import sleep
 
+def destroy_all():
+    for label in window.winfo_children():
+        label.destroy()
+
 def pack_button():
     button = Button(window,text="Choose SOL File",command=choose_file)
     button.pack()
+
+def page_button_pack(End):  
+    page_frame= Frame()
+    page_frame.pack()
+    if page != 0 :
+        prev_button = Button(page_frame,text="Prev",command=prev_page)
+        prev_button.grid(row=0,column=0)
+    if page == 0 or End ==  False:
+        next_button = Button(page_frame,text="Next",command=next_page)
+        next_button.grid(row=0,column=1)
+        
+def next_page():
+    global page
+    global end
+
+    end = False
     
+    if page < len(result) % 36 or page < 5:
+        destroy_all()
+        page += 1
+        pack_button()
+        Label(window, height= 1, text=solo_file_name, font = "Verdana 12 bold", fg='black').pack()
+        for n in range (35 * page , 35 * page + 36):
+            if n < len(color_result):
+                Hex = color_result[n][-7:]
+                R = int(color_result[n][-6:-4] , 16)
+                G = int(color_result[n][-4:-2] , 16)
+                B = int(color_result[n][-2:] , 16)
+                Aver = ( R + G + B ) // 3
+
+                print( "RGB(" + R + "," + G + "," + B + ")" )              
+                if Aver < 126:
+                    l = Label(window, bg=Hex, height= 1, text=color_result[n], font = ("Verdana", 10), fg='white')
+                else:
+                    l = Label(window, bg=Hex, height= 1, text=color_result[n], font = ("Verdana", 10), fg='black')
+            else:
+                l = Label(window, height= 1, text="", font = ("Verdana", 10), fg='white')
+                end = True
+            l.pack()
+        page_button_pack(end)
+        p = Label(window, height= 1, text= "Page " + str(page+1), font = ("Verdana", 8))
+        p.pack()
+            
+def prev_page():
+    global page
+    global end
+
+    end = False
+    
+    if page > 0:
+        destroy_all()
+        page -= 1
+        pack_button()
+        Label(window, height= 1, text=solo_file_name, font = "Verdana 12 bold", fg='black').pack()
+        for n in range (35 * page , 35 * page + 36):
+            Hex = color_result[n][-7:]
+            R = int(color_result[n][-6:-4] , 16)
+            G = int(color_result[n][-4:-2] , 16)
+            B = int(color_result[n][-2:] , 16)
+            Aver = ( R + G + B ) // 3
+            
+            if Aver < 126:
+                l = Label(window, bg=Hex, height= 1, text=color_result[n], font = ("Verdana", 10), fg='white')
+            else:
+                l = Label(window, bg=Hex, height= 1, text=color_result[n], font = ("Verdana", 10), fg='black')
+            l.pack()
+        page_button_pack(end)
+        p = Label(window, height= 1, text= "Page " + str(page+1), font = ("Verdana", 8))
+        p.pack()
+        
 def choose_file():
     global file_path
     
@@ -25,11 +98,16 @@ def color_find():
     global color_result
     global global_num
     global button
+    global result
+    global solo_file_name
+    global page
+    global R, G, B
+    global end
+
+    end = False
 
     if global_num != 0:
-        for label in window.winfo_children():
-            label.destroy()
-        pack_button()
+        destroy_all()
         
     file_target = open(file_path, "r", encoding='ANSI')
     file_target = file_target.read()
@@ -82,7 +160,7 @@ def color_find():
             B = str(B)
 
             result = str(str(color_list[n]) + str((8 - len(color_list[n])) * " ") + " > RGB(" + R + "," + G + "," + B + ") Hex-Data: " + Hex.upper())
-            if n < 43 or global_num < 43:
+            if n <= 35 or global_num <= 35:
                 if Aver < 126:
                     l = Label(window, bg=Hex, height= 1, text=result, font = ("Verdana", 10), fg='white')
                 else:
@@ -90,10 +168,7 @@ def color_find():
                 l.pack()
             color_result.append(result)
 
-        for n in range(0, len(color_result)-1):
-            color_result[n] = color_result[n] + "\n"
-
-        if color_list.count("0") == 1 or color_list.count("16777215") == 1 :
+        if len(color_list) == 1 and (color_list.count("0") == 1 or color_list.count("16777215") == 1) :
             if "0" in color_list:
                 window.title("That's it?This is just a black picture.")
             else:
@@ -106,25 +181,32 @@ def color_find():
             out_file.write(solo_file_name + "\n")
             out_file.write("Nb of Colors: " + str(len(color_list)) + "\n")
             
-            for n in range(0, len(color_result)):
-                out_file.write(color_result[n])
+            for n in range(0, len(color_result)-1):
+                out_file.write(color_result[n] + "\n" )
+
+            out_file.write(color_result[len(color_result)-1])
 
             out_file.close()
 
-            if len(color_list) > 43 :
-                window.title("Wow! That's a lotsa colors")
-                sleep(5)
-
-            window.title("Done! Check the txt file!")
+            if len(color_list) > 35 :
+                window.geometry("600x900")
+                page_button_pack(end)
+                p = Label(window, height= 1, text= "Page " + str(page+1), font = ("Verdana", 8))
+                p.pack()
+                window.title("Done! Check the txt file! Don't forget to scroll page!")
+            else:
+                window.geometry("600x800")
+                window.title("Done! Check the txt file!")
 
     else:
         window.title("Are you sure this is a Coloring Widget SOL File?")
 
 file_path = ""
 global_num = 0
+page = 0
 
 window=Tk()
-window.geometry("600x900")
+window.geometry("600x800")
 window.title("Welcome to Coloring Widget Color Finder. Please choose a SOL File.")
 window.iconbitmap("DA Pixel Maker Tool Ico.ico")
 pack_button()
