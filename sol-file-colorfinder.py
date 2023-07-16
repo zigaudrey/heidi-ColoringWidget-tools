@@ -107,6 +107,7 @@ def color_find():
 
     if global_num != 0:
         destroy_all()
+        pack_button()
         
     file_target = open(file_path, "r", encoding='ANSI')
     file_target = file_target.read()
