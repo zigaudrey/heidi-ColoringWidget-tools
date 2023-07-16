@@ -101,7 +101,6 @@ def color_find():
     global result
     global solo_file_name
     global page
-    global R, G, B
     global end
 
     end = False
