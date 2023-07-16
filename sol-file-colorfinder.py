@@ -208,7 +208,7 @@ page = 0
 window=Tk()
 window.geometry("600x800")
 window.title("Welcome to Coloring Widget Color Finder. Please choose a SOL File.")
-window.iconbitmap("DA Pixel Maker Tool Ico.ico")
+window.iconbitmap("coloringtool-tool-icon.ico")
 pack_button()
 
 window.mainloop()
