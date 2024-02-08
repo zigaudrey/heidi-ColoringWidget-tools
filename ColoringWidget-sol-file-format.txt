@@ -44,6 +44,17 @@ If added a white pixel as the first case, . ‡G(87,47) turn into . ‡Q (87,53)
 .ƒc (83,63) for all Black (0)
 .‘. (91,01) for all White (16777215)
 Space of 3438 / D6E or [E / 15 et 62 / 98]
+
+More the color Value of the first pixel is high, more the last bit goes higher. Same for the other way. It is a number, but what?
+From Black to White: 87 51 to 87 43 (8)
+
+For all Blue (804)
+First Pixel 1513 > ‡O
+804 > ‡G
+
+For All Black (0)
+First Pixel 4194304 > ƒo (83 6F)
+0 > ƒc (83 63)
 ===============================================
 COLOR DECIMAL VALUE
 
