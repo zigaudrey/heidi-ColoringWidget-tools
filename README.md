@@ -31,5 +31,7 @@ Here are exemple of [Pixel Art made with this Flash App](https://web.archive.org
 
 ## Why these tools were made
 After the ZDA-Reconstruction-Tool, I decide to take another file to analyze (and take advantage of) and choose the Flash Cookie for Coloring Widget. It was easy to understand until the three bytes after "grid" part. Another factor is that I won't to lose the Art data value and getting the right color is a pain.
+
 I know these Pixel Art are mean to be one-of-the-kind piece of work but these kind of scripts has to exist, right?
+
 The project has been on hold for months but I have yet to find informations about how Flash software write the sol file and what these means. I feel like the sol files are under-analyze.
