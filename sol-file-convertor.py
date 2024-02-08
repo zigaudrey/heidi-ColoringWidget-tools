@@ -14,7 +14,7 @@ file_path=filedialog.askopenfilename(initialdir=os.getcwd(), title="Select Image
 
 if len(file_path) != 0:
 
-    openpic = Image.open(file_path)
+    openpic = Image.open(file_path).convert("RGB")
     h,w = openpic.size
 
     if 545 < w and w < 565 and 545 < h and h < 565:
