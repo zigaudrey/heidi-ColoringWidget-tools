@@ -1,3 +1,5 @@
+![image](https://github.com/zigaudrey/heidi-ColoringWidget-tools/assets/129554573/d1c61392-f005-4ec8-a347-bb109cf5f07c)
+
 **DISCLAIMER: The sol-file-convertor script is unfinished. Reason: what the 3 bytes after the grid in the Sol File do?**
 
 # Heidi's ColoringWidget Tools
@@ -34,4 +36,4 @@ After the ZDA-Reconstruction-Tool, I decide to take another file to analyze (and
 
 I know these Pixel Art are mean to be one-of-the-kind piece of work but these kind of scripts has to exist, right?
 
-The project has been on hold for months but I have yet to find informations about how Flash software write the sol file and what these means. I feel like the sol files are under-analyze.
+The project has been on hold for months and I have yet to find informations about how Flash software write the sol file and what these means. I feel like the sol files are under-analyze.
