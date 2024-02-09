@@ -22,7 +22,7 @@ Retrieve color values from the SOL File. A list of color values will be displaye
 
 ## Story of Heidi's Coloring Widget Tool
 Heidi's Coloring Widget (or as I call DA Pixel Maker) is a Flash App created for [the 2010 contest "Show Your Love"](https://web.archive.org/web/20121114101333/https://heidi.deviantart.com/journal/Show-the-Love-Valentine-s-Day-Contest-214219090).
-Though to be made for the Valentine-theme contest, artists use it as a Pixel Art software, even after the end of the contest. Until Flash Reader is no longer available.
+Though to be made for the Valentine-theme contest, artists use it as a Pixel Art software, even after the end line.
 
 ![image](https://github.com/zigaudrey/heidi-ColoringWidget-tools/assets/129554573/ee2cf4a9-f7af-4320-be18-c4429382be80)
  _Preview of the Flash App_
