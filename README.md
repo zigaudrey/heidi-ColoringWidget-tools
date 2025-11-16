@@ -31,6 +31,10 @@ The Flash App can played [in this journal](https://web.archive.org/web/201211141
 
 Here are exemple of [Pixel Art made with this Flash App](https://web.archive.org/web/20120119161727/http://browse.deviantart.com/contests/2010/showthelove/)
 
+## External Link ##
+
+[Flash Cookie SOL File Format]{https://rewiki.miraheze.org/wiki/Flash_Cookie_SOL} on Reverse Engineering Wiki
+
 ## Why these tools were made
 After the ZDA-Reconstruction-Tool, I decide to take another file to analyze (and take advantage of) and choose the Flash Cookie for Coloring Widget. It was easy to understand until the three bytes after "grid" part. Another factor is that I won't to lose the Art data value and getting the right color is a pain.
 
