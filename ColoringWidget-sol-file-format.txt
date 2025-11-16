@@ -1,19 +1,22 @@
 HEIDI'S COLORING WIDGET SOL FILE FORMAT
 
-Eudian Order: Little Eudian
+Eudian Order: Big Eudian
 
 HEADER 1 (Lenght: 6)
 2 Bytes = 00 BF (Magic Byte)
 4 Bytes = File Lenght (unint32) (Header 2 + Body)
 
 HEADER 2 (Lenght: 38)
-4 Bytes = Letters TCOS
-8 Bytes = 00 04 00 00 00 00 00 0E
-14 Bytes = String "ColoringWidget"
-5 Bytes = 00 00 00 03 09
+4 Bytes = String TCOS
+8 Bytes = 00 04 00 00 00 00 00
+1 Byte = 0E / Lengh of Flash File Name
+14 Bytes = String "ColoringWidget" / Flash File Name
+4 Bytes = 00 00 00 03 / AMF3 Format Type
+1 Byte = 09 / Array-Maker
+
+AMF3 Data Stream
 4 Bytes = String "grid"
-1 Byte = 06
-2 Bytes = Something about Color Number Lenght
+3 Bytes = Parse Code Thingie
 
 BODY (Lenght: Variable)
 121 *
@@ -23,39 +26,8 @@ x Bytes = Color Decimal Value // 0 - 16777215
 Separated with Comas / 2C
 Body end with Null / 00
 
-==============================================
-GRID'S TWO (OR THREE) BYTES
+=================================
 
-0 < code < 128 = Result + 1
-128 < code < 2048 = Result + 2
-2048< code < 65536 = Result + 3
-code > 65536 = Result + 4
-
-. ‡G = 135 + 71 = 206
-2 * 121 = 242
--121 * 
-
-By changing the color blue shade, the unknows bytes remain the same. This is linked to Color Decimal Number Lenght!
-The Script for [All Dark Blue Pixel Sheet] shows the result of 300
-
-If added a black pixel as the first case, . ‡G(87,47) turn into . ‡C (87,43)
-If added a white pixel as the first case, . ‡G(87,47) turn into . ‡Q (87,53)
-
-.ƒc (83,63) for all Black (0)
-.‘. (91,01) for all White (16777215)
-Space of 3438 / D6E or [E / 15 et 62 / 98]
-
-More the color Value of the first pixel is high, more the last bit goes higher. Same for the other way. It is a number, but what?
-From Black to White: 87 51 to 87 43 (8)
-
-For all Blue (804)
-First Pixel 1513 > ‡O
-804 > ‡G
-
-For All Black (0)
-First Pixel 4194304 > ƒo (83 6F)
-0 > ƒc (83 63)
-===============================================
 COLOR DECIMAL VALUE
 
 The Flash App reads pixels from left to right, top to bottom.
