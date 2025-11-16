@@ -33,7 +33,7 @@ Here are exemple of [Pixel Art made with this Flash App](https://web.archive.org
 
 ## External Link ##
 
-[Flash Cookie SOL File Format]{https://rewiki.miraheze.org/wiki/Flash_Cookie_SOL} on Reverse Engineering Wiki
+[Flash Cookie SOL File Format](https://rewiki.miraheze.org/wiki/Flash_Cookie_SOL) on Reverse Engineering Wiki
 
 ## Why these tools were made
 After the ZDA-Reconstruction-Tool, I decide to take another file to analyze (and take advantage of) and choose the Flash Cookie for Coloring Widget. It was easy to understand until the three bytes after "grid" part. Another factor is that I won't to lose the Art data value and getting the right color is a pain.
