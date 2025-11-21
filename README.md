@@ -1,6 +1,6 @@
 ![image](https://github.com/zigaudrey/heidi-ColoringWidget-tools/assets/129554573/d1c61392-f005-4ec8-a347-bb109cf5f07c)
 
-**DISCLAIMER: The sol-file-convertor script is unfinished. Reason: what the 3 bytes after the grid in the Sol File do?**
+**You can edit the SOL file with the SOL Editor tool from [JPEX Free Flash Decompiler](https://github.com/jindrapetrik/jpexs-decompiler). I decided to archive this repository.**
 
 # Heidi's ColoringWidget Tools
 Python scripts that convert pictures or retrieve color data for Heidi's ColoringWidget Flash App
