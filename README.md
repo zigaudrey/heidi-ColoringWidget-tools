@@ -1,6 +1,6 @@
 ![image](https://github.com/zigaudrey/heidi-ColoringWidget-tools/assets/129554573/d1c61392-f005-4ec8-a347-bb109cf5f07c)
 
-**You can edit the SOL file with the SOL Editor tool from [JPEX Free Flash Decompiler](https://github.com/jindrapetrik/jpexs-decompiler). I decided to archive this repository.**
+**You can edit the SOL file with the SOL Editor tool from [JPEX Free Flash Decompiler](https://github.com/jindrapetrik/jpexs-decompiler). What you can do is create a list of color with it. I decided to archive this repository.**
 
 # Heidi's ColoringWidget Tools
 Python scripts that convert pictures or retrieve color data for Heidi's ColoringWidget Flash App
@@ -16,6 +16,8 @@ Convert a picture into a SOL file to resume or modify on the Flash App.
 	- AppData\Roaming\Macromedia\Flash Player\#SharedObjects\9N8E36RZ\#localWithNet\Users\Your_Username\Documents\Flash Files\ColoringWidget
 1. Place the new file, delete the old one and rename it **ColoringWidget.sol**
 1. Open the Coloring Widget App and the picture is now displayed
+
+2. Copy/paste the list of colors in the SOL Editor in [JPEX Free Flash Decompiler](https://github.com/jindrapetrik/jpexs-decompiler).
 
 ## SOL Color Finder
 Retrieve color values from the SOL File. A list of color values will be displayed and added in a new TXT aside with the target SOL File.
