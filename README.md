@@ -11,13 +11,16 @@ Convert a picture into a SOL file to resume or modify on the Flash App.
 ### Steps for SOL Conversion Tool
 1. If you don't have PIL, install it with PIP
 1. Open the app, choose a picture you want to convert (dimension must be around 550 x 550)
-1. A new SOL file will be created. It will be added on the same folder as the original picture
-1. Go to the directory below:
-	- AppData\Roaming\Macromedia\Flash Player\#SharedObjects\9N8E36RZ\#localWithNet\Users\Your_Username\Documents\Flash Files\ColoringWidget
-1. Place the new file, delete the old one and rename it **ColoringWidget.sol**
-1. Open the Coloring Widget App and the picture is now displayed
+2. A new SOL file will be created. It will be added on the same folder as the original picture
+   ~~Go to the directory below:~~
+	~~- AppData\Roaming\Macromedia\Flash Player\#SharedObjects\9N8E36RZ\#localWithNet\Users\Your_Username\Documents\Flash Files\ColoringWidget~~
+- ~~Place the new file, delete the old one and rename it **ColoringWidget.sol**~~
+- ~~Open the Coloring Widget App and the picture is now displayed~~
 
-2. Copy/paste the list of colors in the SOL Editor in [JPEX Free Flash Decompiler](https://github.com/jindrapetrik/jpexs-decompiler).
+1. Use the Sol Editor to edit the Cookie.
+	- The file can be found in: AppData\Roaming\Macromedia\Flash Player\#SharedObjects\9N8E36RZ\#localWithNet\Users\Your_Username\Documents\Flash Files\ColoringWidget
+1. Copy/paste the list of colors in the SOL Editor.
+1. Open the Coloring Widget App and the picture is now displayed
 
 ## SOL Color Finder
 Retrieve color values from the SOL File. A list of color values will be displayed and added in a new TXT aside with the target SOL File.
